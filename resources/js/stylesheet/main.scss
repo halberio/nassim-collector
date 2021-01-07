@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap");
+
+@import "../../sass/mixins.scss";
+@import "../../sass/variables";
+
+html {
+  --light-blue: #9bdcfe;
+  --pink: #c40050;
+  --red: #b61f2a;
+  --dark-pink: #7b1e2a;
+  --white: #fff;
+
+  font-family: "Cairo", sans-serif;
+}
+
+body {
+  background: var(--light-blue);
+  font-family: "Cairo", sans-serif;
+}
+.app-layout {
+  @include flexbox();
+  @include flex-direction(column);
+  min-height: 100vh;
+  background: var(--light-blue) !important;
+}
+
+.hide-on-mobile {
+  @media (max-width: 992px) {
+    display: none;
+  }
+}

@@ -1,0 +1,26 @@
+:root {
+    --primary:#00677F;
+    --primary-dark: #013A47;
+    --primary-70: #013a47d8;
+    --primary-50: #013a47b6;
+    --primary-30: #013a4791;
+    --primary-10: #013a4770;
+    --logo: #013A47;
+    --sidebar-icon: #adebff;
+  }
+
+  .bg-grad-sidebar {
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from(#00677F),
+      to(#0a7a93)
+    );
+
+    background-image: linear-gradient(
+      0deg,
+      #00677F,
+      #0a7a93
+    );
+  }

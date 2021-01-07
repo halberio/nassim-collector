@@ -1,0 +1,8 @@
+@import "./variables";
+@import "./mixins.scss";
+
+button {
+  &:focus {
+    outline: none;
+  }
+}
