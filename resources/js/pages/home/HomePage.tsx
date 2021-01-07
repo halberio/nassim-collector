@@ -17,13 +17,19 @@ const HomePage: React.FC<IHomePageProps> = ({}) => {
     axios
       .get("/api/get-last-catalog")
       .then(function (response) {
-        setFileUrl(process.env.MIX_STORAGE_URL + response.data.file);
+        if (response && response.data && response.data.file) {
+          setFileUrl(process.env.MIX_STORAGE_URL + response.data.file);
+        } else {
+          message.error(
+            "On a pas encore ajouté le fichier pdf 😭, Merci de réessayer plus tard"
+          );
+        }
       })
       .catch(function (error) {
         message.error("Error :(");
       })
       .then(function () {});
-  }, [loaded]);
+  }, []);
   React.useEffect(() => {
     if (imageLoaded && logoLoaded) {
       setTimeout(() => {
