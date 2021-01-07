@@ -14,7 +14,7 @@ import {
 import store from "./redux/stores/store";
 import { RootState } from "./redux/reducers";
 
-const token = localStorage.getItem("linapp_token");
+const token = localStorage.getItem("halber_token");
 
 if (token) {
   // if token exists in local storage!

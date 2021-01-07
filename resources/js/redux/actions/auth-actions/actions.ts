@@ -25,7 +25,7 @@ export function login({ email, password }: loginInterface) {
     try {
       const response = await AuthServices.loginRequest({ email, password });
       dispatch({ type: LOGIN_SUCCESS, payload: response.data.provider });
-      localStorage.setItem("linapp_token", response.data.access_token);
+      localStorage.setItem("halber_token", response.data.access_token);
     } catch (e) {
       dispatch({ type: LOGIN_FAILURE });
       if (e && e.response && e.response.data) {
@@ -60,7 +60,7 @@ export function getAuthUser() {
 
 export function connectTheUser(token: any) {
   return async (dispatch: Dispatch) => {
-    localStorage.setItem("linapp_token", token);
+    localStorage.setItem("halber_token", token);
     dispatch({
       type: CONNECT_THE_USER,
       payload: {
@@ -75,7 +75,7 @@ export function logout() {
     dispatch({ type: LOGOUT_REQUEST });
     try {
       //await AuthServices.logoutRequest();
-      localStorage.setItem("linapp_token", "");
+      localStorage.setItem("halber_token", "");
       dispatch({ type: LOGOUT_SUCCESS });
     } catch (e) {
       dispatch({ type: LOGOUT_FAILURE });
