@@ -203,3 +203,50 @@
     }
   }
 }
+
+.gift-box {
+  -webkit-animation: bounce 1s alternate infinite; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: bounce 1s alternate infinite; /* Firefox < 16 */
+  -ms-animation: bounce 1s alternate infinite; /* Internet Explorer */
+  -o-animation: bounce 1s alternate infinite; /* Opera < 12.1 */
+  animation: bounce 1s alternate infinite;
+}
+
+@keyframes bounce {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: 40px;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes bounce {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: 40px;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes bounce {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: 40px;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes bounce {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: 40px;
+  }
+}
