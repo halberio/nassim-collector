@@ -75,6 +75,12 @@
   .col-left {
     flex: 0.5;
     padding-top: $spacing-m;
+    .gift-bbox {
+      position: absolute;
+      width: 23%;
+      top: 27%;
+      left: 17%;
+    }
   }
   .col-right {
     flex: 0.5;
@@ -155,6 +161,8 @@
   h1 {
     color: var(--red);
     text-align: center;
+    direction: ltr;
+    font-weight: bold;
     font-size: 3.2rem;
     font-family: "arab";
     max-width: 64rem;
@@ -211,13 +219,20 @@
   -o-animation: bounce 1s alternate infinite; /* Opera < 12.1 */
   animation: bounce 1s alternate infinite;
 }
+.gift-box2 {
+  -webkit-animation: bounce 1s alternate infinite; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: bounce 1s alternate infinite; /* Firefox < 16 */
+  -ms-animation: bounce 1s alternate infinite; /* Internet Explorer */
+  -o-animation: bounce 1s alternate infinite; /* Opera < 12.1 */
+  animation: bounce 1s alternate infinite;
+}
 
 @keyframes bounce {
   from {
     margin-top: 0;
   }
   to {
-    margin-top: 40px;
+    margin-top: -40px;
   }
 }
 
@@ -227,7 +242,7 @@
     margin-top: 0;
   }
   to {
-    margin-top: 40px;
+    margin-top: -40px;
   }
 }
 
@@ -237,7 +252,7 @@
     margin-top: 0;
   }
   to {
-    margin-top: 40px;
+    margin-top: -40px;
   }
 }
 
@@ -247,6 +262,6 @@
     margin-top: 0;
   }
   to {
-    margin-top: 40px;
+    margin-top: -40px;
   }
 }

@@ -114,6 +114,11 @@ const HomePage: React.FC<IHomePageProps> = ({}) => {
                 src={require("../../../img/car-gift.png")}
                 alt="NAssim collector"
               />
+              <img
+                className="gift-bbox gift-box2"
+                src={require("../../../img/big-gift.png")}
+                alt="Nassim gift box"
+              />
             </div>
           </div>
           <div className="col-right">
@@ -128,14 +133,15 @@ const HomePage: React.FC<IHomePageProps> = ({}) => {
             </Row>
             <Row justify="center">
               <h1 id="text-h1-gsap" className="fade-in-with-gsap">
-                إجمع أغطية زبادي شذا و إربح سيارة و جوائز مالية ضخمة
+                إجمع أغطية زبادي شذا و إربح الجائزة الكبرى سيارة و جوائز
+                مالية ضخمة
               </h1>
             </Row>
             <Row justify="center">
               <h2 id="text-h2-gsap" className="fade-in-with-gsap">
-                للمشاركة و الفوز نزل مجلة المسابقة قم بطباعتها أو تحصل عليها
-                مجانا في نقاط التجميع الخاصة بالمسابقة. لمزيد من التفاصيل اطلع
-                على قانون المسابقة
+                للمشاركة والفوز نزل مجلة المسابقة وقم بطباعتھا أو تحصل علیھا
+                مجانا من الأسواق لمزید من التفاصیل یرجى الاطلاع على قانون
+                المسابق
               </h2>
             </Row>
             <Row
