@@ -141,7 +141,7 @@ const HomePage: React.FC<IHomePageProps> = ({}) => {
               <h2 id="text-h2-gsap" className="fade-in-with-gsap">
                 للمشاركة والفوز نزل مجلة المسابقة وقم بطباعتھا أو تحصل علیھا
                 مجانا من الأسواق لمزید من التفاصیل یرجى الاطلاع على قانون
-                المسابق
+                المسابقة
               </h2>
             </Row>
             <Row
