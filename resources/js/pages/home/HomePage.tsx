@@ -15,6 +15,7 @@ const HomePage: React.FC<IHomePageProps> = ({}) => {
   const [logoLoaded, setLogoLoaded] = React.useState(false);
   const [loaded, setLoaded] = React.useState(false);
   const [fileUrl, setFileUrl] = React.useState(null);
+
   React.useEffect(() => {
     axios
       .get("/api/get-last-catalog")
