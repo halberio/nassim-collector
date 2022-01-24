@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Catalog;
+use App\Models\Download;
 use Illuminate\Http\Request;
 
 class CatalogController extends Controller
@@ -21,6 +22,16 @@ class CatalogController extends Controller
   {
     $catalog = Catalog::orderBy('created_at', 'desc')->first();
     return response()->json($catalog);
+  }
+
+  public function newDownload()
+  {
+    $ipAddress = $_SERVER['REMOTE_ADDR'];
+
+    $download = Download::create([
+      'ip_address' => $ipAddress
+    ]);
+    return response()->json($download);
   }
   /**
    * Show the form for creating a new resource.

@@ -1,5 +1,6 @@
 import React from "react";
 import "./pink-button.scss";
+import axios from "axios";
 
 export type IPinkButtonProps = {
   fileUrl: string | null;
@@ -10,6 +11,7 @@ const PinkButton: React.FC<IPinkButtonProps> = ({ fileUrl, title }) => {
   return (
     <a
       onClick={() => {
+        axios.post("/api/new-download");
         //@ts-ignore
         if (window && window.fbq) {
           //@ts-ignore
@@ -20,11 +22,6 @@ const PinkButton: React.FC<IPinkButtonProps> = ({ fileUrl, title }) => {
       target="_blank"
       className="pink-button"
     >
-      <div className="btn-dot" />
-      <div className="btn-dot" />
-      <div className="btn-dot" />
-      <div className="btn-dot" />
-      <div className="btn-dot" />
       <div className="btn-title">{title ? title : "Text Title"}</div>
     </a>
   );

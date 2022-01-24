@@ -16,35 +16,23 @@
 
 .max-width-container {
   display: block;
-  margin: 0 auto;
+  margin: 0;
   width: 100%;
-  padding-left: $spacing-xs;
-  padding-right: $spacing-xs;
 
   @media (min-width: 992px) {
     max-width: 990px;
-    padding-left: $spacing-xs;
-    padding-right: $spacing-xs;
   }
   @media (min-width: 1100px) {
     max-width: 1100px;
-    padding-left: $spacing-xs;
-    padding-right: $spacing-xs;
   }
   @media (min-width: 1200px) {
     max-width: 1200px;
-    padding-left: $spacing-xs;
-    padding-right: $spacing-xs;
   }
   @media (min-width: 1366px) {
     max-width: 1366px;
-    padding-left: $spacing-xs;
-    padding-right: $spacing-xs;
   }
   @media (min-width: 1600px) {
     max-width: 1600px;
-    padding-left: $spacing-s;
-    padding-right: $spacing-s;
   }
   @media (min-width: 1920px) {
     max-width: 1900px;

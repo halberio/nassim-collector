@@ -3,6 +3,17 @@
 @import "../../sass/mixins.scss";
 @import "../../sass/variables";
 
+@font-face {
+  font-family: "f1";
+  src: url("../../fonts/f1.woff2") format("woff2"),
+    url("../../fonts/f1.woff") format("woff");
+}
+
+.f1 {
+  font-family: "f1" !important;
+  color: #153581!important;
+}
+
 html {
   --light-blue: #9bdcfe;
   --pink: #c40050;

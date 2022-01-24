@@ -2,9 +2,8 @@
 @import "../../../../sass/variables";
 
 .pink-button {
-  background: #c40050;
   border: none;
-  border-bottom: 3px solid var(--dark-pink);
+  border: 2px solid white;
   font-family: "arab";
   color: var(--white);
   padding-left: $spacing-xl;
@@ -15,82 +14,20 @@
   position: relative;
   overflow: hidden;
   z-index: 0;
-  .btn-dot {
-    display: block;
-    background: var(--white);
-    width: 5px;
-    height: 5px;
-    opacity: 0.2;
-    position: absolute;
-    border-radius: 100%;
-    left: 4px;
-    top: 50%;
-    &:nth-child(2) {
-      left: 13px;
-      top: 52%;
-      opacity: 0.4;
-      width: 5.5px;
-      height: 5.5px;
-    }
-    &:nth-child(3) {
-      left: 13px;
-      top: 44%;
-      opacity: 0.4;
-      width: 4px;
-      height: 4px;
-    }
-  }
-  @include transition(all, 0.3s, ease);
-  &::before {
-    pointer-events: none;
-    content: "";
-    @include transition(all, 0.3s, ease);
-    z-index: 0;
-    position: absolute;
-    background: #c71761;
-    border-radius: 100%;
-    width: 300%;
-    height: 400%;
-    bottom: 15%;
-    right: -50%;
-  }
-  &::after {
-    pointer-events: none;
-    content: ")";
-    display: block;
-    background: transparent;
-    z-index: 0;
-    position: absolute;
-    top: 46%;
-    @include transform(translateY(-50%) skew(-1deg) scaleX(0.9) rotate(-5deg));
-    right: 5px;
-    opacity: 0.5;
-    font-size: 2.2rem;
-    font-family: "arab";
-    @media (min-width: 992px) {
-      font-size: 2.8rem;
-    }
-    @media (min-width: 1200px) {
-      font-size: 3rem;
-    }
-    @media (min-width: 1366px) {
-      font-size: 3.2rem;
-    }
-    @media (min-width: 1440px) {
-      font-size: 3.5rem;
-    }
-    @media (min-width: 1600px) {
-      font-size: 3.7rem;
-    }
-    @media (min-width: 1920px) {
-      font-size: 4rem;
-    }
-  }
+  background: rgb(211, 23, 69);
+  background: linear-gradient(
+    180deg,
+    rgba(211, 23, 69, 1) 0%,
+    rgba(222, 41, 97, 1) 100%
+  );
+
   .btn-title {
     position: relative;
     z-index: 1;
-    padding-left: $spacing-s;
-    padding-right: $spacing-s;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
   }
   &:hover {
     &::before {
@@ -98,24 +35,19 @@
     }
     color: var(--white);
   }
-  font-size: 3.2rem;
+  font-size: 4vh;
+  line-height: 4vh;
   font-family: "arab";
   @media (min-width: 992px) {
-    font-size: 3.8rem;
+    font-size: 2vw;
+    line-height: 2vw;
   }
   @media (min-width: 1200px) {
-    font-size: 4rem;
-  }
-  @media (min-width: 1366px) {
-    font-size: 4.2rem;
-  }
-  @media (min-width: 1440px) {
-    font-size: 4.5rem;
+    font-size: 3vw;
+    line-height: 3vw;
   }
   @media (min-width: 1600px) {
-    font-size: 4.7rem;
-  }
-  @media (min-width: 1920px) {
-    font-size: 5rem;
+    font-size: 4vw;
+    line-height: 4vw;
   }
 }

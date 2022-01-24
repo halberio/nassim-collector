@@ -5,6 +5,8 @@ import { PinkButton } from "../../components/buttons/pink-button/PinkButton";
 import { LoadingIndicator } from "../../components/loading/LoadingIndicator";
 import axios from "axios";
 import "./home-page.scss";
+import Images from "../../components/Images";
+import Footer from "../../components/Footer";
 
 export type IHomePageProps = {};
 
@@ -114,12 +116,8 @@ const HomePage: React.FC<IHomePageProps> = ({}) => {
                 src={require("../../../img/car-gift.png")}
                 alt="NAssim collector"
               />
-              <img
-                className="gift-bbox gift-box2"
-                src={require("../../../img/big-gift.png")}
-                alt="Nassim gift box"
-              />
             </div>
+            <Images />
           </div>
           <div className="col-right">
             <Row justify="center">
@@ -131,19 +129,20 @@ const HomePage: React.FC<IHomePageProps> = ({}) => {
                 alt="Nassim power"
               />
             </Row>
-            <Row justify="center">
-              <h1 id="text-h1-gsap" className="fade-in-with-gsap">
-                إجمع أغطية زبادي شذا و إربح الجائزة الكبرى سيارة و جوائز
-                مالية ضخمة
-              </h1>
-            </Row>
-            <Row justify="center">
-              <h2 id="text-h2-gsap" className="fade-in-with-gsap">
-                للمشاركة والفوز نزل مجلة المسابقة وقم بطباعتھا أو تحصل علیھا
-                مجانا من الأسواق لمزید من التفاصیل یرجى الاطلاع على قانون
-                المسابقة
+            <div className="texts">
+              <h2 id="text-h1-gsap" className="fade-in-with-gsap f1">
+                إجمع أغطية شذا وإربح
               </h2>
-            </Row>
+              <h1 id="text-h1-gsap" className="fade-in-with-gsap">
+                الجائزة الكبرى سيارة
+              </h1>
+              <h2 id="text-h1-gsap" className="fade-in-with-gsap f1">
+                و جوائز مالية ضخمة بقيمة
+              </h2>
+              <h1 id="text-h1-gsap" className="fade-in-with-gsap">
+                240.000 دينار
+              </h1>
+            </div>
             <Row
               justify="center"
               id="button-gsap"
@@ -151,23 +150,11 @@ const HomePage: React.FC<IHomePageProps> = ({}) => {
               style={{ position: "relative" }}
             >
               <PinkButton title="نزّل المجلة" fileUrl={fileUrl} />
-              <img
-                className="gift-box"
-                src={require("../../../img/gift.png")}
-                alt="Nassim gift box"
-              />
             </Row>
           </div>
         </div>
       </div>
-      <a href="/game-rules.pdf" target="_blank" className="blue-btn">
-        قانون المسابقة
-      </a>
-      {!loaded && (
-        <div className="loading-container">
-          <LoadingIndicator />
-        </div>
-      )}
+      <Footer />
     </div>
   );
 };

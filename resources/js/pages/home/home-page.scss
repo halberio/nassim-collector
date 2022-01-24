@@ -5,8 +5,13 @@
   background: var(--light-blue);
   background-image: url("../../../img/bg.jpg");
   background-size: cover;
+  background-position: bottom;
   min-height: 100vh;
   position: relative;
+  @media (min-width: 992px) {
+    padding-bottom: 80px;
+    height: 100vh;
+  }
   .blue-btn {
     position: absolute;
     left: 0;
@@ -38,15 +43,23 @@
     @media (min-width: 1440px) {
       font-size: 2.6rem;
     }
-    @media (min-width: 1600px) {
-      font-size: 2.8rem;
-    }
     @media (min-width: 1920px) {
       font-size: 3rem;
     }
     &:hover {
       opacity: 0.7;
     }
+  }
+  .max-width-container {
+    @media (min-width: 992px) {
+      height: 100%;
+    }
+  }
+  .texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
   }
   .loading-container {
     position: absolute;
@@ -62,104 +75,163 @@
     opacity: 0;
   }
   .row-home {
-    min-height: 100vh;
     position: relative;
     height: 100%;
-    @include flexbox();
-    @include flex-direction(column-reverse);
-    @include align-items(center);
+    display: flex;
+    flex-direction: column-reverse;
+
     @media (min-width: 992px) {
-      @include flex-direction(row);
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
     }
   }
   .col-left {
-    flex: 0.5;
-    padding-top: $spacing-m;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    @media (max-width: 991px) {
+      padding: 20px;
+    }
+    @media (min-width: 992px) {
+      padding-left: 15rem;
+    }
     .gift-bbox {
       position: absolute;
       width: 23%;
-      top: 27%;
-      left: 17%;
-    }
-  }
-  .col-right {
-    flex: 0.5;
-    padding: $spacing-m;
-    padding-left: $spacing-l;
-    padding-right: $spacing-l;
-    @media (max-width: 320px) {
-      padding-left: $spacing-m;
-      padding-right: $spacing-m;
-    }
-    @media (min-width: 992px) {
-      padding-left: $spacing-xl;
-      padding-right: $spacing-xl;
+      bottom: 35%;
+      left: 0;
+      max-width: 40px;
+      @media (min-width: 992px) {
+        width: 23%;
+        bottom: 40%;
+        left: 0;
+        max-width: 150px;
+      }
     }
     .gift-box {
       position: absolute;
-      right: 0;
-      top: 50%;
       pointer-events: none;
-      @media (max-width: 992px) {
-        right: -5%;
-        top: 70%;
-      }
-      @include transform(translateY(-50%));
-      max-width: 6rem;
+      right: 5px;
+      max-width: 40px;
+      bottom: 80px;
       @media (min-width: 992px) {
-        max-width: 9rem;
+        right: -80px;
+        bottom: 100px;
+        max-width: 100px;
       }
-      @media (min-width: 1200px) {
-        max-width: 10rem;
+    }
+    .noix {
+      position: absolute;
+      left: 0;
+      top: 10%;
+      max-width: 40px;
+      @media (min-width: 992px) {
+        top: 5%;
+        max-width: 140px;
       }
-      @media (min-width: 1366px) {
-        max-width: 11rem;
+    }
+    .peche {
+      position: absolute;
+      left: 10px;
+      top: -10%;
+      max-width: 40px;
+      @media (min-width: 992px) {
+        left: unset;
+        top: 18%;
+        right: -5%;
+        max-width: 140px;
       }
-      @media (min-width: 1440px) {
-        max-width: 12rem;
+    }
+    .pomme {
+      position: absolute;
+      top: 0;
+      max-width: 40px;
+      @media (min-width: 992px) {
+        top: 7%;
+        left: 35%;
+        max-width: 70px;
       }
-      @media (min-width: 1600px) {
-        max-width: 13rem;
+    }
+    .vanille {
+      position: absolute;
+      top: 0;
+      right: 20%;
+      max-width: 40px;
+      @media (min-width: 992px) {
+        top: 0;
+        right: 35%;
+        max-width: 80px;
       }
-      @media (min-width: 1920px) {
-        max-width: 14rem;
+    }
+    .fraise {
+      position: absolute;
+      top: 5%;
+      right: 3%;
+      max-width: 30px;
+      @media (min-width: 992px) {
+        top: 17%;
+        right: 20%;
+        max-width: 80px;
       }
+    }
+    .cerise {
+      position: absolute;
+      top: 30%;
+      right: 0;
+      max-width: 30px;
+      @media (min-width: 992px) {
+        top: unset;
+        bottom: 17%;
+        left: 10%;
+        right: unset;
+        max-width: 80px;
+      }
+    }
+    .berries {
+      position: absolute;
+      bottom: 20%;
+      left: 5%;
+      max-width: 30px;
+      @media (min-width: 992px) {
+        top: 28%;
+        right: 35%;
+        max-width: 70px;
+      }
+    }
+  }
+  .col-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 991px) {
+      padding: 20px;
+      margin-bottom: 20px;
     }
   }
 
   .img-container-home {
     position: relative;
-
-    img {
+    > img {
+      padding-bottom: 5rem;
       width: 100%;
-      top: 0;
-
-      bottom: 0;
-      @media (min-width: 992px) {
-        margin-left: -10%;
-        width: 120%;
-      }
+      position: relative;
     }
   }
   .logo-nassim {
-    max-width: 20rem;
+    max-width: 200px;
+    margin-bottom: 10px;
     @media (min-width: 992px) {
-      max-width: 26rem;
+      margin-bottom: 40px;
+      max-width: 280px;
     }
     @media (min-width: 1200px) {
-      max-width: 28rem;
-    }
-    @media (min-width: 1366px) {
-      max-width: 30rem;
-    }
-    @media (min-width: 1440px) {
-      max-width: 32rem;
-    }
-    @media (min-width: 1600px) {
-      max-width: 34rem;
+      max-width: 350px;
     }
     @media (min-width: 1920px) {
-      max-width: 36rem;
+      max-width: 500px;
     }
   }
   h1 {
@@ -167,51 +239,32 @@
     text-align: center;
     direction: ltr;
     font-weight: bold;
-    font-size: 3.2rem;
+    font-size: 4vh;
     font-family: "arab";
-    max-width: 64rem;
+    margin-bottom: 0.5rem;
     @media (min-width: 992px) {
-      font-size: 3.8rem;
+      font-size: 2vw;
     }
     @media (min-width: 1200px) {
-      font-size: 4rem;
-    }
-    @media (min-width: 1366px) {
-      font-size: 4.2rem;
-    }
-    @media (min-width: 1440px) {
-      font-size: 4.5rem;
-    }
-    @media (min-width: 1600px) {
-      font-size: 4.7rem;
+      font-size: 3vw;
     }
     @media (min-width: 1920px) {
-      font-size: 5rem;
+      font-size: 4vw;
     }
   }
   h2 {
     text-align: center;
     font-family: "Cairo", sans-serif;
-    font-size: 2rem;
-    max-width: 62rem;
-    margin-bottom: $spacing-m;
+    font-size: 2.5vh;
+    margin-bottom: 0.5rem;
     @media (min-width: 992px) {
-      font-size: 2.1rem;
+      font-size: 1.5vw;
     }
     @media (min-width: 1200px) {
-      font-size: 2.2rem;
-    }
-    @media (min-width: 1366px) {
-      font-size: 2.4rem;
-    }
-    @media (min-width: 1440px) {
-      font-size: 2.6rem;
-    }
-    @media (min-width: 1600px) {
-      font-size: 2.8rem;
+      font-size: 2vw;
     }
     @media (min-width: 1920px) {
-      font-size: 3rem;
+      font-size: 2.5vw;
     }
   }
 }
@@ -231,12 +284,65 @@
   animation: bounce 1s alternate infinite;
 }
 
+.image {
+  -webkit-animation: bounce 1s alternate infinite; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: bounce 1s alternate infinite; /* Firefox < 16 */
+  -ms-animation: bounce 1s alternate infinite; /* Internet Explorer */
+  -o-animation: bounce 1s alternate infinite; /* Opera < 12.1 */
+  animation: bounce 1s alternate infinite;
+}
+.image2 {
+  -webkit-animation: bounce2 1s alternate infinite; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: bounce2 1s alternate infinite; /* Firefox < 16 */
+  -ms-animation: bounce2 1s alternate infinite; /* Internet Explorer */
+  -o-animation: bounce2 1s alternate infinite; /* Opera < 12.1 */
+  animation: bounce2 1s alternate infinite;
+}
+
+.image3 {
+  -webkit-animation: bounce3 1s alternate infinite; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: bounce3 1s alternate infinite; /* Firefox < 16 */
+  -ms-animation: bounce3 1s alternate infinite; /* Internet Explorer */
+  -o-animation: bounce3 1s alternate infinite; /* Opera < 12.1 */
+  animation: bounce3 1s alternate infinite;
+}
+
 @keyframes bounce {
   from {
-    margin-top: 0;
+    padding-left: 0;
   }
   to {
-    margin-top: -40px;
+    padding-left: 5px;
+    @media (min-width: 992px) {
+      padding-left: 10px;
+    }
+  }
+}
+
+@keyframes bounce2 {
+  from {
+    padding-right: 5px;
+    @media (min-width: 992px) {
+      padding-right: 10px;
+    }
+  }
+  to {
+    padding-right: 0;
+  }
+}
+
+@keyframes bounce3 {
+  from {
+    padding-right: 10px;
+    @media (min-width: 992px) {
+      padding-right: 20px;
+    }
+  }
+  to {
+    padding-right: 5px;
+    @media (min-width: 992px) {
+      padding-right: 10px;
+    }
   }
 }
 
@@ -267,5 +373,47 @@
   }
   to {
     margin-top: -40px;
+  }
+}
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media (min-width: 992px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  > a {
+    @media (max-width: 991px) {
+      margin-bottom: 10px !important;
+      display: block;
+    }
+  }
+  > a,
+  p {
+    direction: rtl;
+    color: #153581;
+    font-size: 1rem;
+    font-weight: "normal";
+    margin-bottom: 0;
+    text-decoration: none;
+    @media (min-width: 992px) {
+      font-size: 1.5rem;
+    }
+    @media (min-width: 1200px) {
+      font-size: 2rem;
+    }
+    @media (min-width: 1920px) {
+      font-size: 3rem;
+    }
   }
 }
