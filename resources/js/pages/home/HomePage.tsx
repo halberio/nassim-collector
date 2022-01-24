@@ -21,7 +21,9 @@ const HomePage: React.FC<IHomePageProps> = ({}) => {
       .get("/api/get-last-catalog")
       .then(function (response) {
         if (response && response.data && response.data.file) {
-          setFileUrl(process.env.MIX_STORAGE_URL + response.data.file);
+          setFileUrl(
+            "https://shadacollector.com/storage/" + response.data.file
+          );
         } else {
           message.error(
             "On a pas encore ajouté le fichier pdf 😭, Merci de réessayer plus tard"
