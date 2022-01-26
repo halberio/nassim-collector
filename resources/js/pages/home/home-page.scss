@@ -243,13 +243,13 @@
     font-family: "arab";
     margin-bottom: 0.5rem;
     @media (min-width: 992px) {
-      font-size: 2vw;
+      font-size: 3vh;
     }
     @media (min-width: 1200px) {
-      font-size: 3vw;
+      font-size: 4vh;
     }
     @media (min-width: 1920px) {
-      font-size: 4vw;
+      font-size: 6vh;
     }
   }
   h2 {
@@ -258,13 +258,13 @@
     font-size: 2.5vh;
     margin-bottom: 0.5rem;
     @media (min-width: 992px) {
-      font-size: 1.5vw;
+      font-size: 2vh;
     }
     @media (min-width: 1200px) {
-      font-size: 2vw;
+      font-size: 3vh;
     }
     @media (min-width: 1920px) {
-      font-size: 2.5vw;
+      font-size: 5vh;
     }
   }
 }

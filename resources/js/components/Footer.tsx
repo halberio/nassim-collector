@@ -3,7 +3,7 @@ import React from "react";
 export default function Footer() {
   return (
     <div className="footer">
-      <a className="f1" href="/game-rules.pdf" target="_blank">
+      <a className="f1" href="/rules.pdf" target="_blank">
         قانون المسابقة
       </a>
       <p className="f1">
