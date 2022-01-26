@@ -11,7 +11,7 @@
 
 .f1 {
   font-family: "f1" !important;
-  color: #153581!important;
+  color: #153581 !important;
 }
 
 html {
@@ -27,6 +27,10 @@ html {
 body {
   background: var(--light-blue);
   font-family: "Cairo", sans-serif;
+  @media (min-width: 992px) {
+    min-height: 100vh;
+    overflow: hidden;
+  }
 }
 .app-layout {
   @include flexbox();
